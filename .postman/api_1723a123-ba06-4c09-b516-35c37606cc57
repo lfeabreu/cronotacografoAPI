@@ -9,6 +9,7 @@ id = 1723a123-ba06-4c09-b516-35c37606cc57
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"19395664-06984c10-0578-47e7-acca-aead6d7ce70f","path":"INMETRO - Cronotacógrafo.json","metaData":{}}
 
 [config.relations.collections.metaData]
 

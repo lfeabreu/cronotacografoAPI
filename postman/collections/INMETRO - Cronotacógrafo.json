@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "06984c10-0578-47e7-acca-aead6d7ce70f",
+		"name": "INMETRO - Cronotacógrafo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "19395664-06984c10-0578-47e7-acca-aead6d7ce70f"
+	},
+	"item": [
+		{
+			"name": "SolicitarCertificado",
+			"id": "dc10ddb8-e1b4-4ef9-a9c7-ca5a56a7748a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<SolicitarCertificado>\r\n    <Certificado>10191586</Certificado>\r\n    <Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig# schema.xsd\" Id=\"AAAAA\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n        <SignedInfo>\r\n            <CanonicalizationMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n            <SignatureMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n            <Reference>\r\n                <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n            </Reference>\r\n            <Reference>\r\n                <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n            </Reference>\r\n        </SignedInfo>\r\n        <SignatureValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</SignatureValue>\r\n        <KeyInfo>\r\n            <RetrievalMethod />\r\n            <RetrievalMethod />\r\n            <KeyValue />\r\n        </KeyInfo>\r\n        <Object Id=\"AAAAB\" />\r\n        <Object Encoding=\"https://www.liquid-technologies.com\" />\r\n        <Object MimeType=\"string\" Encoding=\"https://www.liquid-technologies.com\" />\r\n        <Object MimeType=\"string\" />\r\n        <Object Encoding=\"https://www.liquid-technologies.com\" />\r\n    </Signature>\r\n</SolicitarCertificado>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_prod}}/certificados/solicitar",
+					"host": [
+						"{{url_prod}}"
+					],
+					"path": [
+						"certificados",
+						"solicitar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarVeiculos",
+			"id": "41f37381-4dc9-45bc-8bba-24b2439cebf6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><ConsultarVeiculo xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><Veiculo><Uf>PR</Uf><UfPosto>PR</UfPosto><DataInicial>01/01/2024</DataInicial><DataFinal>29/01/2024</DataFinal><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig# schema.xsd\" Id=\"AAAAA\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SignedInfo Id=\"AAAAB\"><CanonicalizationMethod Algorithm=\"https://www.liquid-technologies.com\" /><SignatureMethod Algorithm=\"https://www.liquid-technologies.com\" /><Reference><DigestMethod Algorithm=\"https://www.liquid-technologies.com\" /><DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue></Reference><Reference><DigestMethod Algorithm=\"https://www.liquid-technologies.com\" /><DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue></Reference><Reference><DigestMethod Algorithm=\"https://www.liquid-technologies.com\" /><DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue></Reference></SignedInfo><SignatureValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</SignatureValue><KeyInfo><MgmtData>string</MgmtData><RetrievalMethod /><MgmtData>string</MgmtData></KeyInfo><Object /><Object Encoding=\"https://www.liquid-technologies.com\" /><Object Id=\"AAAAC\" MimeType=\"string\" /></Signature></Veiculo></ConsultarVeiculo>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_prod}}/veiculos/consultar",
+					"host": [
+						"{{url_prod}}"
+					],
+					"path": [
+						"veiculos",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarPorInstrumento",
+			"id": "33e27a14-a108-4adf-b144-f1f598eabaf6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<consultarPorInstrumento xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <Instrumento>\r\n        <NumeroSerie>PR</NumeroSerie>\r\n        <Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig# schema.xsd\" Id=\"AAAAA\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n            <SignedInfo Id=\"AAAAB\">\r\n                <CanonicalizationMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                <SignatureMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                <Reference>\r\n                    <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                    <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                </Reference>\r\n                <Reference>\r\n                    <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                    <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                </Reference>\r\n                <Reference>\r\n                    <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                    <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                </Reference>\r\n            </SignedInfo>\r\n            <SignatureValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</SignatureValue>\r\n            <KeyInfo>\r\n                <MgmtData>string</MgmtData>\r\n                <RetrievalMethod />\r\n                <MgmtData>string</MgmtData>\r\n            </KeyInfo>\r\n            <Object />\r\n            <Object Encoding=\"https://www.liquid-technologies.com\" />\r\n            <Object Id=\"AAAAC\" MimeType=\"string\" />\r\n        </Signature>\r\n    </Instrumento>\r\n</consultarPorInstrumento>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_prod}}/veiculos/consultarPorInstrumento",
+					"host": [
+						"{{url_prod}}"
+					],
+					"path": [
+						"veiculos",
+						"consultarPorInstrumento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnsaiosValidarGRU",
+			"id": "6fc112eb-8a50-497e-8c4b-9c1478162eec",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ValidarGru xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xsi:noNamespaceSchemaLocation=\"schema.xsd\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <Ensaio Id=\"string\">\r\n        <Gru>\r\n            <NumDocumento>294104115006689306</NumDocumento>\r\n            <Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\" xsi:schemaLocation=\"http://www.w3.org/2000/09/xmldsig# schema.xsd\" Id=\"AAAAA\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n                <SignedInfo Id=\"AAAAB\">\r\n                    <CanonicalizationMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                    <SignatureMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                    <Reference>\r\n                        <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                        <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                    </Reference>\r\n                    <Reference>\r\n                        <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                        <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                    </Reference>\r\n                    <Reference>\r\n                        <DigestMethod Algorithm=\"https://www.liquid-technologies.com\" />\r\n                        <DigestValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</DigestValue>\r\n                    </Reference>\r\n                </SignedInfo>\r\n                <SignatureValue>YTM0NZomIzI2OTsmIzM0NTueYQ==</SignatureValue>\r\n                <KeyInfo>\r\n                    <MgmtData>string</MgmtData>\r\n                    <RetrievalMethod />\r\n                    <MgmtData>string</MgmtData>\r\n                </KeyInfo>\r\n                <Object />\r\n                <Object Encoding=\"https://www.liquid-technologies.com\" />\r\n                <Object Id=\"AAAAC\" MimeType=\"string\" />\r\n            </Signature>\r\n        </Gru>\r\n    </Ensaio>\r\n</ValidarGru>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_prod}}/ensaios/validar_gru",
+					"host": [
+						"{{url_prod}}"
+					],
+					"path": [
+						"ensaios",
+						"validar_gru"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f63646d8-2e1f-46cd-a281-271253dfcff8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "76083e2f-d7de-4325-8bde-e6d28fe204ca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ee0966ca-304e-4660-9522-0123e8412c3f",
+			"key": "url_prod",
+			"value": "https://webservice.cronotacografo.rbmlq.gov.br",
+			"type": "string"
+		},
+		{
+			"id": "9c2ad06b-cd1f-45fa-9909-318218cc1435",
+			"key": "url_test",
+			"value": "https://webservicedesenv.cronotacografo.inmetro.rs.gov.br",
+			"type": "string"
+		}
+	]
+}
